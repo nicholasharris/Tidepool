@@ -1,0 +1,3 @@
+Different color heads -> different rewards/food type
+Evolve topology and behavior (Markov Brain? Neuroevolution?)
+Control parameters a la petri?
