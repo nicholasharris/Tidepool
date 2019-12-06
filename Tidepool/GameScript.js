@@ -11,7 +11,7 @@ big_copy_mutation = 0.0;
 min_genome_length = 1000;
 max_genome_length = 5000;
 
-CANVAS_WIDTH = 1400;
+CANVAS_WIDTH = document.getElementById('simulator').clientWidth;
 CANVAS_HEIGHT = 800;
 
 MAX_SPEED = 10;
