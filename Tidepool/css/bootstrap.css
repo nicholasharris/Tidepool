@@ -83,6 +83,21 @@ p {
   margin-bottom: 1rem;
 }
 
+canvas {
+  box-sizing: content-box;
+  overflow: visible;
+  margin-left:auto;
+  margin-top:auto;
+  display: block;
+  vertical-align: middle;
+
+}
+
+.sidebar {
+  background-color: #e4e9b2;
+  height:auto;
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;

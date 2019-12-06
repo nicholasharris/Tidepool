@@ -979,7 +979,6 @@ var myGameArea =
       this.canvas.width = CANVAS_WIDTH;
       this.canvas.height = CANVAS_HEIGHT;
       this.canvas.id = "canvas";
-      this.canvas.style = "border:1px solid #000000";
       this.canvas.parentElement = "parent";
       this.context = this.canvas.getContext("2d");
       document.body.insertBefore(this.canvas, document.body.childNodes[4]);
@@ -1007,16 +1006,6 @@ function game_loop()
   ctx.strokeStyle =  "rgba(0, 0, 0, 1)";
   ctx.fillStyle = "rgba(0, 255, 0, 0.05)";
   ctx.fill();
-  ctx.stroke();
-  //draw border
-  ctx.beginPath();
-  ctx.lineWidth = 2;
-  ctx.moveTo(0, 0);
-  ctx.lineTo(0, CANVAS_HEIGHT);
-  ctx.lineTo(CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx.lineTo(CANVAS_WIDTH, 0);
-  ctx.lineTo(0, 0);
-  ctx.strokeStyle =  "rgba(0, 0, 0, 1)";
   ctx.stroke();
 
   //tick animal entities
