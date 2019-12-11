@@ -17,6 +17,8 @@ CANVAS_HEIGHT = 900;
 MAX_SPEED = 10;
 COEF_OF_FRICTION = 0.01;
 
+
+
 MAX_GEN = 0;
 
 //TICK_S = 0.002;
@@ -992,6 +994,7 @@ function sleep(ms) {
 //Game loop
 function game_loop()
 {
+    //console.log("here");
   var c = document.getElementById("canvas");
   var ctx = c.getContext("2d");
 
@@ -1006,7 +1009,12 @@ function game_loop()
   ctx.strokeStyle =  "rgba(0, 0, 0, 1)";
   ctx.fillStyle = "rgba(0, 255, 0, 0.05)";
   ctx.fill();
-  ctx.stroke();
+    ctx.stroke();
+
+
+    COEF_OF_FRICTION = parseFloat(document.getElementById('friction-input').value);
+
+    console.log(COEF_OF_FRICTION);
 
   //tick animal entities
   for(var i = 0; i < myPopulation.length; i++)
@@ -1041,9 +1049,11 @@ function update_text()
   document.getElementById(  "generation-stats").innerHTML = "Max Generation: " + MAX_GEN.toString(10);
 }
  ///////////////// MAIN CONTENT /////////////////////////////////////////
+window.onload = function () {
+    startGame(); //initializes game
+    window.requestAnimationFrame(game_loop);  //launches game- and rendering-loop
+}
 
-startGame(); //initializes game
-window.requestAnimationFrame(game_loop);  //launches game- and rendering-loop
 
 
 
