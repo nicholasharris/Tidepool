@@ -11,8 +11,8 @@ big_copy_mutation = 0.0;
 min_genome_length = 1000;
 max_genome_length = 5000;
 
-CANVAS_WIDTH = document.getElementById('simulator').clientWidth;
-CANVAS_HEIGHT = 800;
+CANVAS_WIDTH = document.getElementById('simulator-canvas').clientWidth;
+CANVAS_HEIGHT = 900;
 
 MAX_SPEED = 10;
 COEF_OF_FRICTION = 0.01;
@@ -1037,7 +1037,8 @@ function game_loop()
 
 function update_text()
 {
-  document.getElementById("stats").innerHTML = "Num Animals: " + myPopulation.length.toString(10) + "  Max Gen: " + MAX_GEN.toString(10);
+  document.getElementById("population-stats").innerHTML = "Num Animals: " + myPopulation.length.toString(10);
+  document.getElementById(  "generation-stats").innerHTML = "Max Generation: " + MAX_GEN.toString(10);
 }
  ///////////////// MAIN CONTENT /////////////////////////////////////////
 
